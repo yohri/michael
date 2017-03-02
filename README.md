@@ -16,13 +16,13 @@ drop user php_sec_admin cascade;
 	connect phpuser/welcome
 
 create table parts
-	(id number primary key,	category varchar2(20), name2(20));
+	(id number primary key,	category varchar2(20), name varchar2(20));
 	insert into parts values(1,'electrical', 'lamp');
-	insert into parts values(1,'electrical', 'wire');
-	insert into parts values(1,'electrical', 'switch');
-	insert into parts values(1,'plumbing', 'pipe');
-	insert into parts values(1,'plumbing', 'sink');
-	insert into parts values(1,'plumbing', 'toilet');
+	insert into parts values(2,'electrical', 'wire');
+	insert into parts values(3,'electrical', 'switch');
+	insert into parts values(4,'plumbing', 'pipe');
+	insert into parts values(5,'plumbing', 'sink');
+	insert into parts values(6,'plumbing', 'toilet');
 
 
 		connect php_sec_admin/welcome;
@@ -35,3 +35,4 @@ create table parts
 			commit;
 
 			grant select on php_authentication to phpuser;
+
